@@ -35,6 +35,8 @@ public class UserEntity {
 
     @NotNull(message = "Password must be provided.")
     @Size(min=5, max=10, message = "Password must be between {min} and {max} characters long.")
+    //DODATAK DA PASSWORD MORA IMATI JEDNO VELIKO SLOVO, JEDNO MALO I JEDAN BROJ
+    @Pattern(regexp = "(?=.[a-z])(?=.[A-Z])(?=.[0-9])")
     private String password;
 
     @NotNull(message = "Age must be provided.")
@@ -42,5 +44,71 @@ public class UserEntity {
     private Integer age;
 
     public UserEntity() {
+    }
+
+    public UserEntity(Integer id, String firstName, String lastName, String email, String username, String password, Integer age) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.age = age;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
