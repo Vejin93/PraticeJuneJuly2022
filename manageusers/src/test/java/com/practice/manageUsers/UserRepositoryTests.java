@@ -26,10 +26,10 @@ public class UserRepositoryTests {
         user.setFirstName("Pero");
         user.setLastName("Matic");
         */
-        user.setEmail("aco.antic@gmail.com");
-        user.setPassword("6598712");
-        user.setFirstName("Aco");
-        user.setLastName("Antic");
+        user.setEmail("acoa.antici@gmail.com");
+        user.setPassword("659871223");
+        user.setFirstName("Acoa");
+        user.setLastName("Antici");
 
         User savedUser = repo.save(user);
 
